@@ -118,3 +118,183 @@ Booking status changes follow the same real-time architecture using:
                   ┌─────────────────────┐
                   │    MongoDB Atlas    │
                   └─────────────────────┘
+
+
+📁 Project Structure
+instant-mechanic-dashboard/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── ...
+│
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── seed/
+│   ├── server.js
+│   ├── package.json
+│   └── ...
+│
+├── .gitignore
+└── README.md
+
+
+⚙️ Local Setup
+1. Clone the repository
+git clone https://github.com/AmaanAli7/instant-mechanic-dashboard.git
+
+cd instant-mechanic-dashboard
+2. Backend setup
+cd backend
+npm install
+
+Create a .env file:
+
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+CLIENT_URL=http://localhost:5173
+
+Start the backend:
+
+npm run dev
+
+Backend will run on:
+
+http://localhost:5000
+
+Swagger documentation:
+
+http://localhost:5000/api-docs
+3. Frontend setup
+
+Open another terminal:
+
+cd frontend
+npm install
+
+Create a .env file:
+
+VITE_API_URL=http://localhost:5000
+
+Start the frontend:
+
+npm run dev
+
+The application will run on the Vite development URL shown in the terminal.
+
+🔐 Environment Variables
+Backend
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+CLIENT_URL=your_frontend_url
+Frontend
+VITE_API_URL=your_backend_url
+
+Never commit .env files or API keys to the repository.
+
+📡 API Documentation
+
+The backend provides Swagger/OpenAPI documentation for the available REST APIs.
+
+Production documentation:
+
+https://instant-mechanic-dashboard-6p91.onrender.com/api-docs
+
+Main API areas include:
+
+Dashboard
+Bookings
+Mechanics
+Customers
+Analytics
+🔄 Real-Time Events
+Booking Created
+booking:created
+
+Triggered when a new booking is successfully created.
+
+Booking Status Updated
+booking:status-updated
+
+Triggered when a booking status changes.
+
+Supported booking statuses:
+
+pending
+assigned
+on_the_way
+in_progress
+completed
+cancelled
+📱 Responsive Design
+
+The dashboard is designed to work across:
+
+Desktop
+Laptop
+Tablet
+Mobile devices
+
+Responsive layouts are implemented using Tailwind CSS.
+
+🧪 Testing
+
+Production functionality was verified for:
+
+REST API communication
+MongoDB persistence
+Booking creation
+Booking status updates
+Socket.IO connection
+Real-time dashboard updates
+Live KPI updates
+Live activity updates
+Search and filtering
+Responsive layouts
+Analytics rendering
+
+
+🔮 Future Improvements
+
+Potential improvements include:
+
+Authentication and role-based access
+Advanced booking assignment workflow
+Mechanic location tracking
+Real-time map integration
+Push notifications
+Advanced analytics filters
+Export reports
+Automated testing
+CI/CD pipeline
+Performance optimization
+
+
+👨‍💻 Author
+
+Amaan Ali Khaan
+
+B.Tech — Computer Science Engineering
+
+Full Stack / MERN Developer
+
+📄 License
+
+This project was developed as a full-stack vehicle service operations dashboard project.
+
+
+### Now run these commands from the repository root
+
+```powershell
+git add README.md
+git commit -m "Add professional project documentation"
+git push
