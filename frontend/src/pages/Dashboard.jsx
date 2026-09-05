@@ -49,7 +49,10 @@ const Dashboard = () => {
   const refreshSummary = async () => {
   try {
     const response = await getDashboardSummary();
-    setSummary(response.data);
+
+console.log("🔄 LIVE SUMMARY REFRESHED:", response.data);
+
+setSummary(response.data);
   } catch (error) {
     console.error("Failed to refresh dashboard:", error);
   }
@@ -94,9 +97,13 @@ const Dashboard = () => {
         time: "Just now",
       };
 
-      setActivities((prev) =>
-        [newActivity, ...prev].slice(0, 5)
-      );
+      setActivities((prev) => {
+  const updated = [newActivity, ...prev].slice(0, 5);
+
+  console.log("🟢 ACTIVITIES UPDATED:", updated);
+
+  return updated;
+});
 
      await refreshSummary();
     };
@@ -146,6 +153,7 @@ const Dashboard = () => {
 
       setActivities((prev) =>
         [newActivity, ...prev].slice(0, 5)
+      
       );
 
       await refreshSummary();
