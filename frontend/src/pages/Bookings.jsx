@@ -112,7 +112,7 @@ const Bookings = () => {
     <div className="min-h-screen w-full overflow-x-hidden bg-slate-50">
       <Sidebar />
 
-      <div className="ml-0 min-h-screen w-full min-w-0 lg:ml-64">
+      <div className="min-h-screen min-w-0 w-full lg:ml-64 lg:w-[calc(100%-16rem)]">
         <Header />
 
         <main className="w-full min-w-0 p-4 sm:p-6 lg:p-8">

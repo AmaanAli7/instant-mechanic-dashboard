@@ -54,7 +54,7 @@ const Analytics = () => {
       <div className="min-h-screen w-full overflow-x-hidden bg-slate-50">
         <Sidebar />
 
-        <div className="ml-0 w-full min-w-0 lg:ml-64">
+        <div className="min-h-screen min-w-0 w-full lg:ml-64 lg:w-[calc(100%-16rem)]">
           <Header />
 
           <main className="w-full min-w-0 p-4 sm:p-6 lg:p-8">
@@ -67,7 +67,7 @@ const Analytics = () => {
               {[1, 2, 3, 4].map((item) => (
                 <div
                   key={item}
-                  className="overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6"
+                  className="min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6"
                 >
                   <div className="mb-5">
                     <div className="h-5 w-40 animate-pulse rounded bg-slate-200" />
@@ -88,7 +88,7 @@ const Analytics = () => {
     <div className="min-h-screen w-full overflow-x-hidden bg-slate-50">
       <Sidebar />
 
-      <div className="ml-0 w-full min-w-0 lg:ml-64">
+      <div className="min-h-screen min-w-0 w-full lg:ml-64 lg:w-[calc(100%-16rem)]">
         <Header />
 
         <main className="w-full min-w-0 p-4 sm:p-6 lg:p-8">
@@ -113,7 +113,7 @@ const Analytics = () => {
           {/* Charts */}
           <div className="grid w-full min-w-0 grid-cols-1 gap-5 sm:gap-6 xl:grid-cols-2">
             {/* Bookings Over Time */}
-            <div className="w-full min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+            <div className="min-w-0 w-full overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
               <div className="mb-5">
                 <h2 className="font-semibold text-slate-900">
                   Bookings Over Time
@@ -164,7 +164,7 @@ const Analytics = () => {
             </div>
 
             {/* Revenue Over Time */}
-            <div className="w-full min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+            <div className="min-w-0 w-full overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
               <div className="mb-5">
                 <h2 className="font-semibold text-slate-900">
                   Revenue Over Time
@@ -221,7 +221,7 @@ const Analytics = () => {
             </div>
 
             {/* Booking Status */}
-            <div className="w-full min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+            <div className="min-w-0 w-full overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
               <div className="mb-5">
                 <h2 className="font-semibold text-slate-900">
                   Booking Status
@@ -265,7 +265,7 @@ const Analytics = () => {
             </div>
 
             {/* Service Breakdown */}
-            <div className="w-full min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+            <div className="min-w-0 w-full overflow-hidden rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
               <div className="mb-5">
                 <h2 className="font-semibold text-slate-900">
                   Service Breakdown
