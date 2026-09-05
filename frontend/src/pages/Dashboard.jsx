@@ -46,6 +46,15 @@ const Dashboard = () => {
     }
   };
 
+  const refreshSummary = async () => {
+  try {
+    const response = await getDashboardSummary();
+    setSummary(response.data);
+  } catch (error) {
+    console.error("Failed to refresh dashboard:", error);
+  }
+};
+
   useEffect(() => {
     fetchSummary();
   }, []);
@@ -89,15 +98,7 @@ const Dashboard = () => {
         [newActivity, ...prev].slice(0, 5)
       );
 
-      try {
-        const response = await getDashboardSummary();
-        setSummary(response.data);
-      } catch (error) {
-        console.error(
-          "Failed to refresh dashboard:",
-          error
-        );
-      }
+     await refreshSummary();
     };
 
     socket.on("booking:created", handleBookingCreated);
@@ -147,15 +148,7 @@ const Dashboard = () => {
         [newActivity, ...prev].slice(0, 5)
       );
 
-      try {
-        const response = await getDashboardSummary();
-        setSummary(response.data);
-      } catch (error) {
-        console.error(
-          "Failed to refresh dashboard:",
-          error
-        );
-      }
+      await refreshSummary();
     };
 
     socket.on(
